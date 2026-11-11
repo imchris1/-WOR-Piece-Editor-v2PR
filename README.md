@@ -29,6 +29,7 @@ It carries everything it needs and does not look for the game to start.
 - **More plants**: standing wheat, three corn mixes, tall and withered grass, flowers, forest floor, hedgerow, big hardwoods and scattered rocks in the foliage brush.
 - **Lay a corn field in rows** (Objects tab): drag a rectangle and it fills with corn patches on a grid, rows lined up, stalks round the edge. Strength sets how tight.
 - Select tools: a press a few pixels from a unit or an object now picks it up, not only a press on the drawn figure.
+- Artillery spawns show the gun with a crewman holding the sponge-rammer beside it.
 
 ## To start
 
