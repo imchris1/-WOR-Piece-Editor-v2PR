@@ -35,6 +35,8 @@ It carries everything it needs and does not look for the game to start.
 - A clean map now moves every Drill Camp fence, door and shutter to the map's far south-west corner instead of burying it, so nothing of the old map stands on yours.
 - Artillery and cavalry no longer drop from the sky: the camps' unnamed spawn spots are now sat on the new ground and move with the camp.
 - Upload now always sends the second map file (ground data, water, fences), not only when the map name changed.
+- **Out of bounds on the ground**: everything outside the chosen mode's play zone is washed red with faint stripes, in both views. Every zone carries its name at its first corner.
+- Right-click the ground, Camps and spawns, **Move the play zone here** puts the zone's middle on that spot.
 
 ## To start
 
