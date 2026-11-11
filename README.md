@@ -32,6 +32,9 @@ It carries everything it needs and does not look for the game to start.
 - Artillery spawns show the gun with a crewman holding the sponge-rammer beside it.
 - Spawn points wear their own badge: rings on the ground in the side's colour and INF, CAV or ART over the figure, and a ring with the same word on the map.
 - Artillery base and staging points show the gun with its crewman; a battery's forward position shows the crewman with his rammer alone.
+- A clean map now moves every Drill Camp fence, door and shutter to the map's far south-west corner instead of burying it, so nothing of the old map stands on yours.
+- Artillery and cavalry no longer drop from the sky: the camps' unnamed spawn spots are now sat on the new ground and move with the camp.
+- Upload now always sends the second map file (ground data, water, fences), not only when the map name changed.
 
 ## To start
 
