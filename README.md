@@ -1,16 +1,18 @@
-# WOR Piece Editor v2PR
+# Battlefield Forge
 
-A community map editor for War of Rights.
+A community map editor for War of Rights. Until 11 November 2026 it was called the WOR Piece Editor; same program, new name.
 
 ## Download
 
-**Standalone edition (recommended, 110 MB):** open [Releases](../../releases/tag/v2PR) and click `WOR.Piece.Editor.v2PR.exe`.
+**Standalone edition (recommended, 110 MB):** open [Releases](../../releases/tag/v2PR) and click `BattlefieldForge.exe`.
 It carries everything it needs and does not look for the game to start.
 
-**Small edition (1.6 MB):** click **WOR Piece Editor v2PR (small).exe** in the file list above, then the download button
+**Small edition (1.6 MB):** click **BattlefieldForge (small).exe** in the file list above, then the download button
 (the small down-arrow on the right). It builds its files from your own game on the first start, so it has to find the game.
 
 ## What's new (11 November 2026)
+
+- **New name: Battlefield Forge.** Your settings, autosaves and backups from the WOR Piece Editor move over on the first start.
 
 - **Play zones are drawn.** Every zone of the chosen game mode shows as a fence: yellow for the play zone,
   red and blue for the ground each side may not enter, orange for capture areas, tent colours for staging areas.
@@ -35,7 +37,7 @@ right-click War of Rights, Manage, Browse local files.
 
 ## If something goes wrong
 
-Press `Win+R`, type `%APPDATA%\WORPieceEditor` and press Enter. Send the file
+Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file
 `diagnostics.txt` from that folder to whoever gave you this editor.
 
 ## Good to know
