@@ -10,6 +10,17 @@ It carries everything it needs and does not look for the game to start.
 **Small edition (1.6 MB):** click **WOR Piece Editor v2PR (small).exe** in the file list above, then the download button
 (the small down-arrow on the right). It builds its files from your own game on the first start, so it has to find the game.
 
+## What's new (11 November 2026)
+
+- **Play zones are drawn.** Every zone of the chosen game mode shows as a fence: yellow for the play zone,
+  red and blue for the ground each side may not enter, orange for capture areas, tent colours for staging areas.
+- **Zones are fixed on export.** A zone used to keep its original height range, so a map with high ground
+  put every player "out of the playable zone". Export now sits every zone under its ground.
+- **Zones can be reshaped.** Each corner carries a solid node. In Select units, drag a node to move that
+  corner, pull the white square to stretch the zone, or press `-` and `=`. Right-click a fence for
+  **Fit this play zone round the units**, **Resize this zone**, and **Put this zone back**.
+- The export warns when a unit of the mode stands outside its play zone.
+
 ## To start
 
 1. To make and play a map you need War of Rights installed through Steam.
