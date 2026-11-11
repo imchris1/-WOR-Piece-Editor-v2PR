@@ -20,6 +20,7 @@ It carries everything it needs and does not look for the game to start.
   corner, pull the white square to stretch the zone, or press `-` and `=`. Right-click a fence for
   **Fit this play zone round the units**, **Resize this zone**, and **Put this zone back**.
 - The export warns when a unit of the mode stands outside its play zone.
+- **Select anything** (key `V`): one tool that picks zone nodes, units, and objects together, so a node is one press and a drag away.
 
 ## To start
 
