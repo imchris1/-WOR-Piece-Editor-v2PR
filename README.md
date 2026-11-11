@@ -4,11 +4,15 @@ A community map editor for War of Rights.
 
 ## Download
 
-Click **WOR Piece Editor v2PR (small).exe** in the file list above, then the download button (the small down-arrow on the right).
+**Standalone edition (recommended, 110 MB):** open [Releases](../../releases/tag/v2PR) and click `WOR.Piece.Editor.v2PR.exe`.
+It carries everything it needs and does not look for the game to start.
+
+**Small edition (1.6 MB):** click **WOR Piece Editor v2PR (small).exe** in the file list above, then the download button
+(the small down-arrow on the right). It builds its files from your own game on the first start, so it has to find the game.
 
 ## To start
 
-1. You need War of Rights installed through Steam.
+1. To make and play a map you need War of Rights installed through Steam.
 2. Put the exe anywhere, for example on your Desktop, and run it.
 3. Windows warns about an unknown publisher. Click **More info**, then **Run anyway**.
 4. The first start takes a few seconds while it prepares its files from your game.
