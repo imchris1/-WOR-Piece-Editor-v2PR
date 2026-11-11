@@ -31,6 +31,7 @@ It carries everything it needs and does not look for the game to start.
 - Select tools: a press a few pixels from a unit or an object now picks it up, not only a press on the drawn figure.
 - Artillery spawns show the gun with a crewman holding the sponge-rammer beside it.
 - Spawn points wear their own badge: rings on the ground in the side's colour and INF, CAV or ART over the figure, and a ring with the same word on the map.
+- Artillery base and staging points show the gun with its crewman; a battery's forward position shows the crewman with his rammer alone.
 
 ## To start
 
