@@ -37,6 +37,8 @@ It carries everything it needs and does not look for the game to start.
 - Upload now always sends the second map file (ground data, water, fences), not only when the map name changed.
 - **Out of bounds on the ground**: everything outside the chosen mode's play zone is washed red with faint stripes, in both views. Every zone carries its name at its first corner.
 - Right-click the ground, Camps and spawns, **Move the play zone here** puts the zone's middle on that spot.
+- Units outside the play zone are ringed in red with the words OUTSIDE THE PLAY ZONE. The export warning lists them, selects them and puts the camera on the first; **Show me the units outside the play zone** in the ground menu does the same any time.
+- The yellow square at the map's middle is labelled: it is the home mark and the map centre.
 
 ## To start
 
