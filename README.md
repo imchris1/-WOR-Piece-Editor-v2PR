@@ -23,6 +23,9 @@ It carries everything it needs and does not look for the game to start.
   **Fit this play zone round the units**, **Resize this zone**, and **Put this zone back**.
 - The export warns when a unit of the mode stands outside its play zone.
 - **Select anything** (key `V`): one tool that picks zone nodes, units, and objects together, so a node is one press and a drag away.
+- **Clear map**: a toolbar switch for a top-down map with only the ground, the zones and the units on it.
+- **Place a unit here**: right-click the ground, Camps and spawns, pick a unit by name, and it moves to that spot.
+- Settings from the old name move over on the first start, and the old folder name keeps working for older copies.
 
 ## To start
 
@@ -45,4 +48,4 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file
 - The editor never changes your game unless you press **Copy onto my game**.
   **Restore original** puts the game's own file back.
 - Keys: `WASD` move, hold the right mouse button to look, `M` top-down map,
-  `B` select objects, `U` select units, `N` measuring pin, `Ctrl+Z` undo.
+  `B` select objects, `U` select units, `V` select anything, `N` measuring pin, `Ctrl+Z` undo.
