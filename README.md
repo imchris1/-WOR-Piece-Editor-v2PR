@@ -6,11 +6,16 @@ A community map editor for War of Rights. Until 11 November 2026 it was called t
 
 ## Download
 
-**Standalone edition (recommended, 110 MB):** open [Releases](../../releases/tag/v2PR) and click `BattlefieldForge.exe`.
+**Standalone edition (recommended, 115 MB zip):** open [Releases](../../releases/tag/v2PR) and click `BattlefieldForge.zip`.
+Unzip it anywhere you can write to, such as your Desktop or Documents, and run `BattlefieldForge.exe` from the unzipped folder.
 It carries everything it needs and does not look for the game to start.
 
 **Small edition (1.6 MB):** click **BattlefieldForge (small).exe** in the file list above, then the download button
 (the small down-arrow on the right). It builds its files from your own game on the first start, so it has to find the game.
+
+**Why a zip:** on 11 November Windows Defender started calling the old one-file download a virus. That was a wrong guess
+by its machine-learning model, which saw a program unpacking files from inside itself, the way a virus installer does.
+The zip has no such step. If your antivirus still objects to the editor, it is wrong, and a report of what it said helps.
 
 ## What's new (11 November 2026)
 
@@ -52,9 +57,11 @@ It carries everything it needs and does not look for the game to start.
 ## To start
 
 1. To make and play a map you need War of Rights installed through Steam.
-2. Put the exe anywhere, for example on your Desktop, and run it.
+2. Unzip the folder anywhere you can write to, for example your Desktop, keep its files together, and run `BattlefieldForge.exe`.
+   (Small edition: put the exe anywhere and run it.)
 3. Windows warns about an unknown publisher. Click **More info**, then **Run anyway**.
-4. The first start takes a few seconds while it prepares its files from your game.
+4. The first start takes under a minute while it prepares its level files. That happens once.
+   The small edition takes them from your game.
 
 If it cannot find the game on its own, it asks for the game folder. That is usually
 `<a drive>:\SteamLibrary\steamapps\common\War of Rights`. In Steam you can find it with:
