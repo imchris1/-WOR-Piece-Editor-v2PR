@@ -42,6 +42,8 @@ It carries everything it needs and does not look for the game to start.
 - Units outside the play zone are ringed in red with the words OUTSIDE THE PLAY ZONE. The export warning lists them, selects them and puts the camera on the first; **Show me the units outside the play zone** in the ground menu does the same any time.
 - The yellow square at the map's middle is labelled: it is the home mark and the map centre.
 - Spawn spots are lifted to 1.2 m over the ground, and a final pass on every export makes sure no spawn spot is ever written under the map.
+- **Tool panel** down the left edge of the view: every tool one click away, the live one lit.
+- **Placing is a brush**: pick an object, click to set one, or hold the button and drag to lay a row. Brush size sets the spacing.
 
 ## To start
 
