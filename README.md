@@ -19,6 +19,11 @@ The zip has no such step. If your antivirus still objects to the editor, it is w
 
 ## What's new (11 November 2026)
 
+- **The download is now a zip, not a single exe.** Windows Defender's machine-learning model started calling the
+  one-file build a virus on 11 November (a wrong guess: it saw a program unpacking files from inside itself). The zip
+  has no such step. Unzip it, keep the files together, and run `BattlefieldForge.exe`. The first start builds the
+  editor's level file beside it, once.
+
 - **New name: Battlefield Forge.** Your settings, autosaves and backups from the WOR Piece Editor move over on the first start.
 
 - **Play zones are drawn.** Every zone of the chosen game mode shows as a fence: yellow for the play zone,
