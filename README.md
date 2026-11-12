@@ -43,7 +43,11 @@ Small edition: put the exe anywhere and run it. If it cannot find the game by it
 - **Load real terrain** for a place by name on the Places tab. It uses public US elevation data, then takes the modern highways back out of the ground: interstates, their ramps, and the US and state routes, using the USGS road map of the same place. A battlefield does not have an interstate in it.
 - Paint grass, dirt, mud, road, field and woods with soft edges between them, and set a water level.
 
-![Real terrain before and after the editor smooths a modern highway out of it](docs/highway-before-after.png)
+![A ridge raised with the brush on the flat ground, with field, woods and mud painted beside it](docs/sculpt-paint.png)
+
+![Harpers Ferry loaded from real elevation: the Potomac and Shenandoah under water, Maryland Heights across the river](docs/real-terrain.png)
+
+![Real terrain before and after the editor heals a modern highway out of it: I-95 at Fredericksburg](docs/highway-before-after.png)
 
 **Roads, fences, farms and villages**
 - **Roads are real roads.** Click node after node and the road curves through them, graded flat across and even along. Drag a node to bend it, right-click for width and surface (dirt road, forest track, double track). On export every road is the game's own road mesh, with its texture.
@@ -55,17 +59,23 @@ Small edition: put the exe anywhere and run it. If it cannot find the game by it
 - Foliage brushes: meadows, woods, orchards, reeds, standing wheat, corn in rows, hedgerows, big hardwoods, rocks.
 - Select, move, turn and resize with a box select and an axis handle, as in a 3D program.
 
-![The top-down map with a village and its road](docs/top-down-map.png)
+![Woods, standing wheat and a meadow from the foliage brush, a corn field in rows, and a rail fence round them](docs/foliage-fences.png)
+
+![Three objects selected, with the move handle and the ring that turns them](docs/select-handles.png)
 
 **Game modes and play zones**
 - Pick Drill Camp, a Skirmish area, Conquest, Contention or Picket Patrol and the editor shows that mode's spawns, staging areas, boundaries and capture points. Move and turn them, or right-click the ground and **Place a unit here**.
 - Every zone is drawn as a fence with a node on each corner. Drag a node, stretch the zone, fit it round the units, or move it to where you point. Ground outside the play zone is washed red, and units left outside are flagged before export.
 - Tickets and cavalry for Conquest and Contention on the Game tab.
 
-![A play zone fence with the units of a game mode behind it](docs/play-zone.png)
+![Conquest in the walk view: the play zone fence, a capture area, the staging areas and the units, with the ground outside washed red](docs/play-zone-walk.png)
+
+![The same on the top-down map: the play zone, the capture area, both sides' staging areas, and every unit of the mode](docs/play-zone-map.png)
 
 **Finding your way**
 - Fly camera, top-down map, a clear-map switch, named grid squares with a feet ruler, a scale bar, a measuring pin, and a stamp tool that writes a word into the ground.
+
+![The top-down map of Harpers Ferry with the grid on: every square named, a feet ruler along each, and the scale bar](docs/map-grid.png)
 
 **Export and share**
 - **Export War of Rights map** writes a level the game loads. **Copy onto my game** puts it into your own game for a look; **Restore original** puts the game's file back.
@@ -76,6 +86,8 @@ Small edition: put the exe anywhere and run it. If it cannot find the game by it
 The game does not send a level to a joining player, so every player installs the map once. Export makes a map file and the **Map Patcher** (`BattlefieldForgePatcher.exe`, in the same folder as the editor) is all a player needs: drop the map file on its window and press **Patch**. **Restore** puts the game's own files back. The editor never touches your game unless you press **Copy onto my game**.
 
 A map takes the Drill Camp slot, on the server and on each player's PC, because a custom level folder cannot be started on the hosted servers available to the community. The server list shows your map's name; the mode column still says Drill Camp.
+
+![The Map Patcher: drop the map files on it and press Patch; Restore puts the game's own files back](docs/patcher.png)
 
 ## Keys
 
