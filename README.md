@@ -17,8 +17,13 @@ It carries everything it needs and does not look for the game to start.
 by its machine-learning model, which saw a program unpacking files from inside itself, the way a virus installer does.
 The zip has no such step. If your antivirus still objects to the editor, it is wrong, and a report of what it said helps.
 
-## What's new (11 November 2026)
+## What's new (12 November 2026)
 
+- **Fixed: the editor would not start on AMD and Intel graphics cards.** It stopped with
+  `ERROR: 0:35: 'patch' : syntax error`. One word in the ground shader was a name those drivers
+  reserve; NVIDIA's driver had let it through, so it never showed here. Every shader is now checked
+  against the whole GLSL keyword list before a build goes out. If a driver ever refuses a shader again,
+  the editor now says so plainly, names the card, and writes `shader_log.txt` beside `diagnostics.txt`.
 - **Roads are now real roads.** The Road tool lays nodes: click along the way the road goes and it curves
   smoothly through every node, as wide as the brush was when you started. Enter finishes it. Drag a node to
   bend the road, Delete removes the node under the cursor, click an end node to carry the road on. Right-click
@@ -89,7 +94,8 @@ right-click War of Rights, Manage, Browse local files.
 ## If something goes wrong
 
 Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file
-`diagnostics.txt` from that folder to whoever gave you this editor.
+`diagnostics.txt` from that folder to whoever gave you this editor. If the editor said your
+graphics driver refused a shader, send `shader_log.txt` from the same folder too.
 
 ## Good to know
 
