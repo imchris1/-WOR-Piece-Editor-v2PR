@@ -19,6 +19,20 @@ The zip has no such step. If your antivirus still objects to the editor, it is w
 
 ## What's new (11 November 2026)
 
+- **Roads are now real roads.** The Road tool lays nodes: click along the way the road goes and it curves
+  smoothly through every node, as wide as the brush was when you started. Enter finishes it. Drag a node to
+  bend the road, Delete removes the node under the cursor, click an end node to carry the road on. Right-click
+  a road for its width, its surface (dirt road, forest track, double track), a node where you point, or to
+  take it away. The ground is graded flat across the road and even along it as you go, and one Ctrl+Z takes
+  back the node and the ground together. On export every road is written as the game's own road mesh,
+  so in the game it is a proper dirt road with its texture, not only a strip of ground paint.
+- **Towns and farms.** On the Objects tab, pick a mix (village street, farm lane, hamlet, or one farmstead)
+  and drag along a street: houses stand along both sides with fenced fronts and outbuildings behind; a farm
+  lane puts whole farmsteads with barns, spring houses, corn cribs, hay and a fenced yard every 120 m. A short
+  drag puts one farmstead where you pressed. Right-click a road and **Line this road with houses** does the
+  same along its curve. The buildings are the game's own; a building's front is not known from its model,
+  so each stands with its long side along the street, and the ring handle turns it.
+- Typing in the object search box no longer trips the single-letter hot keys.
 - **The download is now a zip, not a single exe.** Windows Defender's machine-learning model started calling the
   one-file build a virus on 11 November (a wrong guess: it saw a program unpacking files from inside itself). The zip
   has no such step. Unzip it, keep the files together, and run `BattlefieldForge.exe`. The first start builds the
@@ -57,7 +71,7 @@ The zip has no such step. If your antivirus still objects to the editor, it is w
 - **Fly camera**: WASD flies where you look, E or Space up, Q or C down, Shift fast, Ctrl slow. The pace grows with your height.
 - **Finer sculpting**: the brush goes down to 1 m, strength is finer at the low end, Shift while sculpting is a heavy hand, and a Roughen tool adds small bumps and detail.
 - **Fence tool**: drag from one end to the other and the panels are laid end to end; start the next run where the last ended to turn a corner.
-- **Road tool**: drag from one end to the other and the ground is graded evenly between them, flat across the brush width with blended shoulders, and surfaced. Runs join at corners and keep their height.
+- **Road tool**: click node after node and the road curves through them, graded flat across the brush width with blended shoulders, and surfaced. See the top of this list.
 
 ## To start
 
