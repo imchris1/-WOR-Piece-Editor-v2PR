@@ -2,6 +2,8 @@
 
 A community map editor for War of Rights. Until 11 November 2026 it was called the WOR Piece Editor; same program, new name.
 
+**Work in progress.** This editor is being built and refined as we go, with new builds most days. Expect rough edges, and expect things to change between builds. If something is wrong, say so: what you did, what happened, and the `diagnostics.txt` file (see below), and it gets fixed in the next build. Maps you make keep working; a new build opens your old saves.
+
 ## Download
 
 **Standalone edition (recommended, 110 MB):** open [Releases](../../releases/tag/v2PR) and click `BattlefieldForge.exe`.
