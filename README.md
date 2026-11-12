@@ -44,6 +44,8 @@ It carries everything it needs and does not look for the game to start.
 - Spawn spots are lifted to 1.2 m over the ground, and a final pass on every export makes sure no spawn spot is ever written under the map.
 - **Tool panel** down the left edge of the view: every tool one click away, the live one lit.
 - **Placing is a brush**: pick an object, click to set one, or hold the button and drag to lay a row. Brush size sets the spacing.
+- **Fly camera**: WASD flies where you look, E or Space up, Q or C down, Shift fast, Ctrl slow. The pace grows with your height.
+- **Finer sculpting**: the brush goes down to 1 m, strength is finer at the low end, Shift while sculpting is a heavy hand, and a Roughen tool adds small bumps and detail.
 
 ## To start
 
@@ -65,5 +67,5 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file
 
 - The editor never changes your game unless you press **Copy onto my game**.
   **Restore original** puts the game's own file back.
-- Keys: `WASD` move, hold the right mouse button to look, `M` top-down map,
-  `B` select objects, `U` select units, `V` select anything, `N` measuring pin, `Ctrl+Z` undo.
+- Keys: `WASD` fly where you look, `E`/`Space` up, `Q`/`C` down, `Shift` fast, hold the right mouse button to look,
+  `M` top-down map, `B` select objects, `U` select units, `V` select anything, `N` measuring pin, `Ctrl+Z` undo.
