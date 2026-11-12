@@ -46,6 +46,8 @@ It carries everything it needs and does not look for the game to start.
 - **Placing is a brush**: pick an object, click to set one, or hold the button and drag to lay a row. Brush size sets the spacing.
 - **Fly camera**: WASD flies where you look, E or Space up, Q or C down, Shift fast, Ctrl slow. The pace grows with your height.
 - **Finer sculpting**: the brush goes down to 1 m, strength is finer at the low end, Shift while sculpting is a heavy hand, and a Roughen tool adds small bumps and detail.
+- **Fence tool**: drag from one end to the other and the panels are laid end to end; start the next run where the last ended to turn a corner.
+- **Road tool**: drag from one end to the other and the ground is graded evenly between them, flat across the brush width with blended shoulders, and surfaced. Runs join at corners and keep their height.
 
 ## To start
 
