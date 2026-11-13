@@ -83,7 +83,12 @@ Small edition: put the exe anywhere and run it. If it cannot find the game by it
 
 ## Getting a map into the game
 
-The game does not send a level to a joining player, so every player installs the map once. Export makes a map file and the **Map Patcher** (`BattlefieldForgePatcher.exe`, in the same folder as the editor) is all a player needs: drop the map file on its window and press **Patch**. **Restore** puts the game's own files back. The editor never touches your game unless you press **Copy onto my game**.
+The game does not send a level to a joining player, so every player installs the map once. Two kinds of file are involved:
+
+- A **`.worpiece`** file is your save: the map as the editor keeps it (**Save** and **Open**). Keep working on it.
+- A **`.wormap`** file is the map packed for players. **Make player map files** on the Game tab writes it, with the Map Patcher and a short how-to beside it, into `export\player-files`.
+
+The **Map Patcher** (`BattlefieldForgePatcher.exe`, in the same folder as the editor) is all a player needs: drop the map file on its window and press **Patch**. It takes a `.wormap`, and it takes a `.worpiece` save as well: the patcher carries the editor's export engine, so it builds the map from the save on the player's own PC (a few minutes; the first time it also prepares the level files from the game), writes the `.wormap` beside the save so it can be passed on, and patches it in. **Restore** puts the game's own files back. The editor never touches your game unless you press **Copy onto my game**.
 
 A map takes the Drill Camp slot, on the server and on each player's PC, because a custom level folder cannot be started on the hosted servers available to the community. The server list shows your map's name; the mode column still says Drill Camp.
 
@@ -113,6 +118,7 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 
 **13 November 2026**
 
+- **The Map Patcher takes a `.worpiece` save.** A player who dropped a save on the patcher was told it was not a map file: a save is the editor's working file, and the patcher wanted the `.wormap` that **Make player map files** writes. The patcher now carries the editor's export engine. Drop a save on it and it builds the map on that PC, writes the `.wormap` beside the save for passing on, and patches it in. Saves now also carry the Game tab's settings (water height, Drill Camp scenery, cavalry, tickets), so a map built from the save matches what its maker would have exported.
 - **Ctrl+F finds anything you placed.** A search window lists every object on the map (and the units of the chosen game mode) by name and place. Type part of a name to narrow it, and the moment you pick a row the camera flies to that object and selects it, in the walk view or on the top-down map. Up and Down step through the rows from the search box, Enter goes there and closes, Esc closes. It is on the right-click menu too, as Find a placed object.
 
 <details>
