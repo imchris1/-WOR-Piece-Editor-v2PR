@@ -102,6 +102,7 @@ A map takes the Drill Camp slot, on the server and on each player's PC, because 
 | `Enter` | finish a road |
 | `Delete` | remove the road node under the cursor |
 | `Ctrl+Z` | undo |
+| `Ctrl+F` | find a placed object or a unit by name and go to it |
 | mouse wheel | brush size |
 
 ## If something goes wrong
@@ -110,13 +111,20 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 
 ## What's new
 
-**12 November 2026**
+**13 November 2026**
+
+- **Ctrl+F finds anything you placed.** A search window lists every object on the map (and the units of the chosen game mode) by name and place. Type part of a name to narrow it, and the moment you pick a row the camera flies to that object and selects it, in the walk view or on the top-down map. Up and Down step through the rows from the search box, Enter goes there and closes, Esc closes. It is on the right-click menu too, as Find a placed object.
+
+<details>
+<summary><b>12 November 2026</b></summary>
 
 - **Interstates are gone from real terrain.** The Places tab was meant to smooth modern highways out of the downloaded ground, but it asked a public OpenStreetMap server that is down more often than not, and when it got no answer the load went ahead with the highways still in. It now takes the roads from the USGS National Map, the same service the elevation comes from, and heals out interstates, their ramps, and the US and state routes. Ground you loaded before is downloaded again on the next load, so old caches get the fix too. If the road lookup ever fails, the editor now says so in a warning box instead of a status line.
 - **Fixed: the editor would not start on AMD and Intel graphics cards.** It stopped with `ERROR: 0:35: 'patch' : syntax error`. One word in the ground shader was a name those drivers reserve; NVIDIA's driver had let it through, so it never showed on the build PC. Every shader is now checked against the whole GLSL keyword list before a build goes out, and if a driver ever refuses a shader again the editor says so plainly, names the card, and writes `shader_log.txt` beside `diagnostics.txt`.
 - **Roads are real roads.** The Road tool lays nodes: click along the way the road goes and it curves smoothly through every node, as wide as the brush was when you started. Enter finishes it. Drag a node to bend the road, Delete removes the node under the cursor, click an end node to carry the road on. Right-click a road for its width, its surface (dirt road, forest track, double track), a node where you point, or to take it away. The ground is graded flat across the road and even along it as you go, and one Ctrl+Z takes back the node and the ground together. On export every road is written as the game's own road mesh, so in the game it is a proper dirt road with its texture, not only a strip of ground paint.
 - **Towns and farms.** On the Objects tab, pick a mix (village street, farm lane, hamlet, or one farmstead) and drag along a street: houses stand along both sides with fenced fronts and outbuildings behind; a farm lane puts whole farmsteads with barns, spring houses, corn cribs, hay and a fenced yard every 120 m. A short drag puts one farmstead where you pressed. Right-click a road and **Line this road with houses** does the same along its curve. The buildings are the game's own; a building's front is not known from its model, so each stands with its long side along the street, and the ring handle turns it.
 - Typing in the object search box no longer trips the single-letter hot keys.
+
+</details>
 
 <details>
 <summary><b>11 November 2026</b></summary>
