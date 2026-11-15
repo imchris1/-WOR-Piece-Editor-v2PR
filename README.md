@@ -117,6 +117,13 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 
 ## What's new
 
+**15 November 2026, night**
+
+- **Objects show their real size.** Every placed object carries its true footprint from the game's own model files: a rectangle on the ground, turned and scaled as placed, in both views, and under the cursor before you set a piece down. Select one object and the status bar gives its size in metres. The sizes are read once from your game's files and remembered.
+- **Lay the chosen object in a line** (Objects tab): pick anything in the list and drag; pieces go end to end at the model's own length, long side along the line. Pontoon bridge sections, railroad pieces, stone walls. Start the next run where the last one ended to carry on.
+- **Place on the water surface** (Objects tab): with this on, the placing tools stop at the water instead of the river bed, so a pontoon bridge floats where you point. Off, placing goes to the ground as before.
+- **Long roads undo properly.** Ctrl+Z after grading a road that spans a lot of ground used to leave the ground as graded; now every cell the road touched goes back, with the road.
+
 **15 November 2026, evening**
 
 - **Your map's own words on the loading screen and F2.** The Game tab has a **Description** box and a **Date line**. They are saved with the map and go out with every export: the game shows them for whichever area of your map the server runs, in place of the Drill Camp text. Leave the box empty to keep the game's own words. First build with it, so please say if the words do not show.
@@ -162,7 +169,8 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 - Upload now always sends the second map file (ground data, water, fences), not only when the map name changed.
 - The yellow square at the map's middle is labelled: it is the home mark and the map centre.
 - **Tool panel** down the left edge of the view: every tool one click away, the live one lit.
-- **Placing is a brush**: pick an object, click to set one, or hold the button and drag to lay a row. Brush size sets the spacing.
+- **Placing is a brush**: pick an object, click to set one, or hold the button and drag to lay a row. Brush size sets the spacing. **Lay the chosen object in a line** puts pieces end to end at the model's own length, and **Place on the water surface** lets a pontoon bridge float where you point.
+- **Objects show their real size**: a footprint rectangle from the game's own model files, in both views and under the cursor; select one and the status bar gives its size in metres.
 - **Fly camera**: WASD flies where you look, E or Space up, Q or C down, Shift fast, Ctrl slow. The pace grows with your height.
 - **Finer sculpting**: the brush goes down to 1 m, strength is finer at the low end, Shift while sculpting is a heavy hand, and a Roughen tool adds small bumps and detail.
 - **Fence tool**: drag from one end to the other and the panels are laid end to end; start the next run where the last ended to turn a corner.
