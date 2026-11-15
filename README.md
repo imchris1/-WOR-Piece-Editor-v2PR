@@ -79,6 +79,7 @@ Small edition: put the exe anywhere and run it. If it cannot find the game by it
 
 **Export and share**
 - **Export War of Rights map** writes a level the game loads. **Copy onto my game** puts it into your own game for a look; **Restore original** puts the game's file back.
+- A **Description** and **Date line** on the Game tab are what the game shows on the loading screen and on F2 for your map.
 - Upload straight to a server over FTP from the FTP tab. Before the first upload the editor keeps the server's own map files on your PC, and **Restore original map on server** sends them back.
 
 ## Getting a map into the game
@@ -115,6 +116,12 @@ A map takes the Drill Camp slot, on the server and on each player's PC, because 
 Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file `diagnostics.txt` from that folder, with what you did and what happened, by [opening an issue](../../issues) here. If the editor said your graphics driver refused a shader, send `shader_log.txt` from the same folder too. Your settings, autosaves and backups live in that folder as well.
 
 ## What's new
+
+**15 November 2026, evening**
+
+- **Your map's own words on the loading screen and F2.** The Game tab has a **Description** box and a **Date line**. They are saved with the map and go out with every export: the game shows them for whichever area of your map the server runs, in place of the Drill Camp text. Leave the box empty to keep the game's own words. First build with it, so please say if the words do not show.
+- **Spawns say what they are.** Every spawn point now carries its full label in the side's colour, in both views: `USA INFANTRY 2`, `CSA ARTILLERY STAGING`, `USA CAVALRY`.
+- The blue box that followed the cursor on the water plane is gone. The water grid and the depth line under the cursor stay.
 
 **15 November 2026**
 
