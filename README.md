@@ -79,7 +79,7 @@ Small edition: put the exe anywhere and run it. If it cannot find the game by it
 
 **Export and share**
 - **Export War of Rights map** writes a level the game loads. **Copy onto my game** puts it into your own game for a look; **Restore original** puts the game's file back.
-- Upload straight to a server over FTP from the FTP tab.
+- Upload straight to a server over FTP from the FTP tab. Before the first upload the editor keeps the server's own map files on your PC, and **Restore original map on server** sends them back.
 
 ## Getting a map into the game
 
@@ -115,6 +115,10 @@ A map takes the Drill Camp slot, on the server and on each player's PC, because 
 Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file `diagnostics.txt` from that folder, with what you did and what happened, by [opening an issue](../../issues) here. If the editor said your graphics driver refused a shader, send `shader_log.txt` from the same folder too. Your settings, autosaves and backups live in that folder as well.
 
 ## What's new
+
+**15 November 2026**
+
+- **Restore original map on server.** A new button on the FTP tab puts the game's own map back on your dedicated server. Before the first upload with this build, the editor fetches the server's current level file and name list over the same FTP login and keeps them on your PC (under `%APPDATA%\BattlefieldForge\server-backup`); a later upload never replaces that first copy. Restore sends them back. If the server was already running one of your maps when that copy was taken, Restore sends the game's own Drill Camp level that the editor carries and your PC's untouched name list instead. Stop the server first, as for an upload.
 
 **13 November 2026**
 
