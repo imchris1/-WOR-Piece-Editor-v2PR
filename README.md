@@ -117,6 +117,11 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 
 ## What's new
 
+**18 November 2026**
+
+- **Satellite colour on the ground.** Load real terrain and the editor also fetches the USGS aerial picture of the same 4 km square and lays it over the ground's colour, so you can see the fields, woods, roads and rivers while you sculpt and place. The Ground tab has a Satellite colour slider, 0 to 100 %. The picture only replaces the colour: the hills keep their light, shadow and depth underneath at any setting. The Places tab has a Load satellite button for a map you opened from a file. It is for looking only and is not exported. The picture is US only, like the elevation, and needs the shader view on.
+- **The picture never makes you wait.** It comes down in the background while the elevation does, and goes onto the ground when it arrives. First build with it, so please say if it misbehaves.
+
 **15 November 2026, night**
 
 - **Objects show their real size.** Every placed object carries its true footprint from the game's own model files: a rectangle on the ground, turned and scaled as placed, in both views, and under the cursor before you set a piece down. Select one object and the status bar gives its size in metres. The sizes are read once from your game's files and remembered.
