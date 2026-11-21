@@ -117,6 +117,10 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 
 ## What's new
 
+**21 November 2026**
+
+- **Fences lay straight.** The fence tool used to swing every rail panel the same way, which made a zigzag at each joint. Now the panels turn 15 degrees one way, then 30 the other way, then straight, and repeat, so the run lines up with the fence line. Lay a fence and check it with your own eyes: please say if the angles still look wrong in the game.
+
 **18 November 2026**
 
 - **Satellite colour on the ground.** Load real terrain and the editor also fetches the USGS aerial picture of the same 4 km square and lays it over the ground's colour, so you can see the fields, woods, roads and rivers while you sculpt and place. The Ground tab has a Satellite colour slider, 0 to 100 %. The picture only replaces the colour: the hills keep their light, shadow and depth underneath at any setting. The Places tab has a Load satellite button for a map you opened from a file. It is for looking only and is not exported. The picture is US only, like the elevation, and needs the shader view on.
