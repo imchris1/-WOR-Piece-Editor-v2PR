@@ -51,7 +51,7 @@ Small edition: put the exe anywhere and run it. If it cannot find the game by it
 
 **Roads, fences, farms and villages**
 - **Roads are real roads.** Click node after node and the road curves through them, graded flat across and even along. Drag a node to bend it, right-click for width and surface (dirt road, forest track, double track). On export every road is the game's own road mesh, with its texture.
-- **Fences** are laid end to end along a drag; start the next run where the last ended to turn a corner.
+- **Fences** are laid end to end along a drag the way the game's own map lays them; start the next run where the last ended to turn a corner.
 - **Towns and farms.** Pick a mix (village street, farm lane, hamlet, one farmstead) and drag along a street: houses stand on both sides with fenced fronts and outbuildings behind, farm lanes get whole farmsteads with barns and yards. Right-click a road and **Line this road with houses** does the same along its curve.
 
 **Objects and foliage**
@@ -117,9 +117,21 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 
 ## What's new
 
-**21 November 2026**
+**21 November 2026, evening**
 
-- **Fences lay straight.** The fence tool used to swing every rail panel the same way, which made a zigzag at each joint. Now the panels turn 15 degrees one way, then 30 the other way, then straight, and repeat, so the run lines up with the fence line. Lay a fence and check it with your own eyes: please say if the angles still look wrong in the game.
+- **Fences run the right way.** The game's own map stands snake-rail panels along the model's other axis, 4.5 m apart, all facing the same way (the zigzag is built into the model). The fence tool and the line tool now lay them like that, so a fence is one continuous zigzag along your drag instead of panels standing across it. This replaces the 15/30 degree swing from this morning.
+- **Objects look like themselves.** Placed objects are drawn with their real shapes from your game's files: the actual house, tree, tent, wagon and fence, coloured by kind. View menu, **Real model shapes**, turns it off.
+- **See a model before you place it.** Rest the cursor on a row of the Objects list and a picture of the model appears beside it, with the size the game places it at.
+- **Raise and lower objects.** Page Up and Page Down lift the selection a quarter metre (a metre with Shift), End puts it back on the ground. In the 3D view the move handle has a blue up arrow to drag, and the right-click menu has a Height item. The height is saved with the map and exported.
+- **Crops and fences follow the hillside.** Corn, wheat, grass and fences now lean with the slope, the way the game's own map has them, instead of stepping down a hill in flat layers. Trees stand on the lowest ground under the trunk, so no side of a trunk hangs in the air. View menu, **Crops, grass and fences lean with the slope**.
+- **The Roulette farmhouse is full size.** The game places it at 3.17 times its built size; so does the editor now, and the same for the wagon, blankets, some tree trunks and the shale cliffs.
+- **Small dips and trenches show.** The ground is drawn much finer near the camera (1 m between points), and a coarse layer no longer covers what you dig. View menu: **Plain ground** takes away the paint and picture and draws contour lines every metre, so shell holes and trenches stand out; **Detailed ground** keeps 1 m detail out to 512 m.
+- **Road settings.** Right-click a road, **Road settings**: width, banks, raise it over the ground (or a negative number for a sunken lane), smooth its grade along its length, surface, and whether the surface is painted. **Use for new roads** keeps them for the next roads.
+- **Scale the terrain.** View menu, **Scale the terrain**: make every hill taller or flatter, or stretch the ground wider or squeeze it in, with objects and roads moving along. The Places tab has **Area km** (how much of the real place goes on the 4 km map) and **Height x** for downloaded ground.
+- **Artillery.** View menu, **Artillery spawns only** shows just the artillery spawn points of the chosen game mode; select units (U) and drag one to where the guns should come in. Objects tab, **All game models** adds every model in the game's files to the list: cannon parts, limbers, caissons and more (search "artillery").
+- **Early capture times** cannot be set by a map: the game has no such setting in a level, and capture speed is a server setting.
+
+First build with all of these, so please say if anything misbehaves, and how it looks in the game.
 
 **18 November 2026**
 
