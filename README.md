@@ -57,7 +57,8 @@ Small edition: put the exe anywhere and run it. If it cannot find the game by it
 **Objects and foliage**
 - Every building, fence, prop and plant the Drill Camp level knows, plus the buildings and props of Antietam, Harpers Ferry and South Mountain. Click to set one, or hold and drag to lay a row.
 - Foliage brushes: meadows, woods, orchards, reeds, standing wheat, corn in rows, hedgerows, big hardwoods, rocks.
-- Select, move, turn and resize with a box select and an axis handle, as in a 3D program.
+- **Tree placer.** A Trees button opens a list of every tree in the game, with a picture of each, plus mixed sets for woods, oaks and orchards. Click to plant, drag for a row, or scatter them through the brush circle.
+- Select, move, turn and resize with a box select and solid handles: arrows, a turning ring with a knob, a resize square and a centre disc to move freely.
 
 ![Woods, standing wheat and a meadow from the foliage brush, a corn field in rows, and a rail fence round them](docs/foliage-fences.png)
 
@@ -116,6 +117,12 @@ A map takes the Drill Camp slot, on the server and on each player's PC, because 
 Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file `diagnostics.txt` from that folder, with what you did and what happened, by [opening an issue](../../issues) here. If the editor said your graphics driver refused a shader, send `shader_log.txt` from the same folder too. Your settings, autosaves and backups live in that folder as well.
 
 ## What's new
+
+**21 November 2026, late**
+
+- **Tree placer.** A **Trees** button on the left panel (or **Tree** on the Ground tab) opens a list of every tree in the game: forest trees 1 to 9 with their trunk variants, small oaks, oak bushes and apple trees, plus mixed sets (every tree, forest trees, oaks, an orchard) where each tree planted is a different one. A picture of the chosen tree shows with its real height, and a green outline of it follows the cursor. Click to plant one, hold and drag for a row a brush width apart, or tick **Scatter in circle** to plant a few at a time through the brush circle, a crown apart (Strength sets how many). **Vary size, turn** gives each tree its own facing and 85 to 120 % of its usual size.
+- **Smaller brush.** The brush now goes down to 0.1 m: the low end of the slider runs 0.1 to 1.0 m in tenths, and the wheel steps a tenth at a time there. Under a metre the sculpt tools work on the nearest point of the ground, more gently the smaller the brush.
+- **Handles you can see and grab.** The handles on a selection are now solid with a dark rim: thick red and green arrows, a yellow ring with a round knob to turn, a white square to resize, and a new disc in the middle to move freely. They stay the same size on screen, an arrow seen end-on no longer shrinks to nothing, the one under the cursor lights up, and the status bar says what it does. A unit standing under a handle can still be clicked and picked up.
 
 **21 November 2026, night**
 
