@@ -12,6 +12,8 @@ Until 11 November 2026 this was the WOR Piece Editor. Same program, new name. Ma
 
 **Work in progress.** New builds most days. Expect rough edges, and expect things to change between builds. Say what went wrong and it gets fixed in the next build. Your saved maps keep working.
 
+**Is it safe?** Maps made here are data only: no Lua scripts, no programs. The Map Patcher refuses a map that holds any, and `BattlefieldForgePakCheck.exe` lets anyone look inside a map file and compare it with the server's copy. The full account is under [Is a map safe? Map safety and Pak Check](#is-a-map-safe-map-safety-and-pak-check).
+
 ## Download
 
 | Edition | Size | Needs the game to start? | Get it |
@@ -95,6 +97,119 @@ The **Map Patcher** (`BattlefieldForgePatcher.exe`, in the same folder as the ed
 A map takes the Drill Camp slot, on the server and on each player's PC, because a custom level folder cannot be started on the hosted servers available to the community. The server list shows your map's name; the mode column still says Drill Camp.
 
 ![The Map Patcher: drop the map files on it and press Patch; Restore puts the game's own files back](docs/patcher.png)
+
+## Is a map safe? Map safety and Pak Check
+
+**Short answer:** a Battlefield Forge map is data. It holds models, terrain and settings. It holds no Lua scripts and no programs, the Map Patcher refuses to install a map that does, and you can check any map file yourself with `BattlefieldForgePakCheck.exe`, which is in the zip and [on this page](https://github.com/imchris1/-WOR-Piece-Editor-v2PR/raw/main/BattlefieldForgePakCheck.exe).
+
+![Pak Check on a map package: both files SAFE and both matching the map maker's fingerprints](docs/pakcheck-safe.png)
+
+### What the worry is, and what is true
+
+People have asked whether a custom map can carry a virus through a Lua script. Here is the plain state of things.
+
+- **A `.pak` file is an archive.** It is a zip with another ending. You can open one with any zip program and look.
+- **A map made by this editor has no scripts in it.** An export is two files, a level's `level.pak` and the level list `LevelsLooseFiles.pak`. Between them they hold only the kinds of file in the table below.
+- **But an archive passed along by hand can be changed.** Someone could take a real map, add a file to the `.pak` and pass it on. The editor cannot prevent that, because it happens after the editor is closed. That is the real risk, and it is the one the Patcher and Pak Check are there for.
+- **The programs are a separate matter.** The editor, the Map Patcher and Pak Check are `.exe` files. Get them from this page or the [release page](../../releases/tag/v2PR) only, never from a copy someone re-uploaded.
+
+Whether War of Rights would run a Lua file found inside a pak has not been tested here, and nothing below depends on the answer: a map that holds one is refused either way.
+
+### What a map may hold
+
+| Inside a map file | Allowed? | What it is |
+|---|---|---|
+| `.cgf` | Yes | Models |
+| `.dds` | Yes | Pictures and textures |
+| `.xml`, `.json` | Yes | Level data and game mode definitions |
+| `.dat`, `.bin`, `.cgb`, `.ctc`, `.bai`, `datafile_mission0_*` | Yes | Terrain, water, ground cover, placed objects, navigation |
+| `.txt`, `.lst` | Yes | Lists of the level's resources |
+| `.cfg` | Only plain settings | A few lines such as `Weather.Rain.Enabled=1`. Anything else in one (a command, a path, quoted text, more than 4 KB) is refused |
+| `.lua`, `.luac` | **No** | Lua scripts |
+| `.exe`, `.dll`, `.bat`, `.cmd`, `.ps1`, `.vbs`, `.js`, `.msi`, `.scr`, `.com`, `.jar`, `.py`, `.reg`, `.lnk` and the like | **No** | Programs and scripts Windows can run |
+| `.swf`, `.gfx` | **No** | Interface files that can carry script |
+| `.pak`, `.zip`, `.7z`, `.rar` | **No** | An archive inside the archive |
+| A file name with hidden control characters | **No** | A name made to mislead |
+| Anything else | **No** | Not a kind of file the game's own level files hold |
+
+The "allowed" list was taken from the game itself: it is every kind of file found in the `level.pak` of Antietam, Drill Camp, Harpers Ferry and South Mountain and in `LevelsLooseFiles.pak`, plus `.dds`. Everything outside it is refused, not only the kinds named above.
+
+### The Map Patcher checks before it installs
+
+You do not have to do anything for this. When a map is dropped on the Map Patcher and **Patch** is pressed:
+
+1. Every file in the map is opened and its list of contents is read, **before anything is copied**.
+2. If any file holds something from the "No" rows, or is not a readable pak at all, the install stops. The message names the file and the first thing found.
+3. A map may only place two kinds of file: `Assets\Levels\<level>\level.pak` and `Assets\LevelsLooseFiles.pak`. A package that wants to put a file anywhere else is refused.
+4. Nothing in the game is changed when a map is refused. A package with one good file and one bad file installs neither.
+5. As before, the game's own files are kept first, and **Restore** puts them back.
+
+### Check a map yourself with Pak Check
+
+`BattlefieldForgePakCheck.exe` is a small separate program. It installs nothing and changes nothing unless you press **Remove flagged files**.
+
+1. Run `BattlefieldForgePakCheck.exe`. Windows may warn about an unknown program: choose **More info**, then **Run anyway**.
+2. Drop on its window any of these, in any mix:
+   - a `.wormap` map package
+   - a `level.pak` or a `LevelsLooseFiles.pak`
+   - your War of Rights folder, or press **Check my game...** and choose it (in Steam: right-click War of Rights, Manage, Browse local files)
+   - a folder holding pak files
+   - a `fingerprints.txt` from the map's maker (see below)
+3. Read the result. Every file gets its own lines, and the last line is the verdict for everything dropped:
+   - **SAFE**: nothing but map data inside.
+   - **WARNING**: files a map has no use for, but no script and no program.
+   - **NOT SAFE**: a script, a program, or something that cannot be part of a map. Do not use the file.
+4. **Copy the report** puts the whole text on the clipboard, to send to the map's maker or a server host.
+
+![Pak Check on a tampered package: a Lua script, a program and a settings file with a command in it, each named](docs/pakcheck-notsafe.png)
+
+**Removing what was found.** For a `.pak` file, **Remove flagged files** writes the file again without the flagged files. Every other file in it is kept exactly as it was, and the old file stays beside it with `.unsafe-backup` added to its name. If the file is inside the game, close the game first. A `.wormap` package cannot be cleaned: do not install it, and ask the map's maker for a new one.
+
+A file that was cleaned has a different fingerprint from the tampered one, so the server and every player then need the cleaned file. If the only thing wrong was an added file, the cleaned file is the original again, with the original's fingerprint.
+
+Any other pak (one that is not named `level.pak` or `LevelsLooseFiles.pak`) is searched for scripts and programs only, because the game's own archives hold many more kinds of data than a map does. The report says so when that applies.
+
+### Fingerprints: does the server have the same files as me?
+
+A fingerprint is a short code worked out from every byte of a file (the first 16 digits of its SHA-256, which Pak Check also prints in full):
+
+```
+78EA-34A4-F5A0-FCB0  DrillCamp\level.pak
+F096-9A15-D6F0-4E90  LevelsLooseFiles.pak
+```
+
+Two files with the same fingerprint are the same file, byte for byte. Change one bit and the code changes. That makes it the way to tell that the server's copy, your copy and the map maker's copy are one and the same, and that nobody changed the map on the way.
+
+**If you make maps**
+
+1. Export as usual. Every export writes `fingerprints.txt` into the editor's `export` folder, beside `level.pak` and `LevelsLooseFiles.pak`. **Copy onto my game**, **Upload to server** and **Make player map files** export first, so they write it too.
+2. Give `fingerprints.txt` to your server's host and your players along with the map, or just paste the two lines where your community can see them.
+3. After any new export the codes are new. Hand out the new file with the new map.
+
+**If you play**
+
+1. Install the map with the Map Patcher.
+2. Run Pak Check, drop the map maker's `fingerprints.txt` on it and press **Check my game...**.
+3. Under **AGAINST THE MAP MAKER'S FINGERPRINTS** each file says **MATCH** or **DIFFERENT**. MATCH on both means you have exactly the files the maker exported.
+
+**If you host a server**
+
+1. Fetch the two files from the server (`Assets/Levels/DrillCamp/level.pak` and `Assets/LevelsLooseFiles.pak`) into a folder on your PC, the same way you upload them.
+2. Drop them on Pak Check together with `fingerprints.txt`. MATCH on both means the server runs the maker's map.
+3. To compare two copies without a fingerprints file, drop both copies. Under **DO THE COPIES MATCH?** the tool says **MATCH** or **DIFFERENT** for each file it has two of.
+
+A **DIFFERENT** most often means an older export is still on one side. Install the current map on that side again and check once more.
+
+### What this does not do
+
+- **The game does not check anything.** War of Rights does not compare a player's map files with the server's. Fingerprints are compared by people, with this tool.
+- **It checks map files, not your PC.** Pak Check is not an antivirus. It answers one question: is there anything in this map file besides map data.
+- **Installing by hand skips the Patcher.** Someone who copies a `.pak` into the game folder themselves gets no check unless they drop the file on Pak Check first.
+- **The small edition does not carry it.** Pak Check is in the zip; with the small exe, download it from this page.
+
+### For those who want to verify the tool
+
+Nothing here asks to be taken on trust. A `.pak` opens in 7-Zip or any zip program, so the contents of any map can be read by eye. The fingerprint is a standard SHA-256, so `certutil -hashfile level.pak SHA256` in a Windows command prompt gives the same digits Pak Check prints. Pak Check also runs without a window, for scripts: `BattlefieldForgePakCheck.exe --check <files or folders> --report report.txt` ends with exit code 0 when everything is safe, 3 when something was flagged, 4 when copies that should match differ, and 1 when a file could not be read.
 
 ## Keys
 
