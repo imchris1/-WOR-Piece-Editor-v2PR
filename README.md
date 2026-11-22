@@ -117,6 +117,15 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 
 ## What's new
 
+**21 November 2026, night**
+
+- **Fixed: the ground could fall back to the old plain look on some graphics cards.** The ground shader kept every play-zone corner in a list that many AMD and Intel drivers count as too big, and a driver that refuses the shader makes the editor draw the plain ground of older builds. The corners now travel another way, and every shader passes the Khronos reference compiler, not only NVIDIA's. If a driver ever refuses a shader again, the editor now says so on the status bar and in the View menu.
+- **Trenches.** A **Trench** button under Road on the left panel: click along the line and a trench is dug through the nodes, a floor 1.5 m deep with a firing step, the earth thrown up as a parapet on the enemy side and a low bank behind, mud on the floor and dirt over the works. Drag, add and remove nodes as for roads. Right-click a trench to turn the parapet to the other side or set its width, depth and parapet height. Trenches go into the game as part of the ground.
+- **Pick a place on a globe.** The Places tab's list is now a globe (NASA's Blue Marble, with sharper pictures as you come closer and aerial photos close in over the United States). Drag to turn it, wheel to come closer, click to pick, double-click to load. Battlefields are gold dots. **Save** keeps a place under your own name (blue dots, and the list under the globe); **Remove** forgets it.
+- **Sharper satellite colour, and a wider picture round it.** The map's own square now comes at about 1 m a pixel (twice as sharp as before), with a 12 km picture round it.
+- **Overlay adjust** (Ground tab): drag the satellite picture under the map, with the land past the map's edge showing round it, then **Load the ground under the picture** to make that the map, no coordinates to type. **Clear overlay** takes the picture off.
+- **All models (beta)** on the Objects tab now leaves out a modern test vehicle, the victory banners and 66 models whose material is missing from the game's files. These pieces are not yet confirmed in the game: try a few before building a map on them.
+
 **21 November 2026, evening**
 
 - **Fences run the right way.** The game's own map stands snake-rail panels along the model's other axis, 4.5 m apart, all facing the same way (the zigzag is built into the model). The fence tool and the line tool now lay them like that, so a fence is one continuous zigzag along your drag instead of panels standing across it. This replaces the 15/30 degree swing from this morning.
@@ -128,7 +137,7 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 - **Small dips and trenches show.** The ground is drawn much finer near the camera (1 m between points), and a coarse layer no longer covers what you dig. View menu: **Plain ground** takes away the paint and picture and draws contour lines every metre, so shell holes and trenches stand out; **Detailed ground** keeps 1 m detail out to 512 m.
 - **Road settings.** Right-click a road, **Road settings**: width, banks, raise it over the ground (or a negative number for a sunken lane), smooth its grade along its length, surface, and whether the surface is painted. **Use for new roads** keeps them for the next roads.
 - **Scale the terrain.** View menu, **Scale the terrain**: make every hill taller or flatter, or stretch the ground wider or squeeze it in, with objects and roads moving along. The Places tab has **Area km** (how much of the real place goes on the 4 km map) and **Height x** for downloaded ground.
-- **Artillery.** View menu, **Artillery spawns only** shows just the artillery spawn points of the chosen game mode; select units (U) and drag one to where the guns should come in. Objects tab, **All game models** adds every model in the game's files to the list: cannon parts, limbers, caissons and more (search "artillery").
+- **Artillery.** View menu, **Artillery spawns only** shows just the artillery spawn points of the chosen game mode; select units (U) and drag one to where the guns should come in. Objects tab, **All models (beta)** adds the game's other models to the list: cannon parts, limbers, caissons and more (search "artillery").
 - **Early capture times** cannot be set by a map: the game has no such setting in a level, and capture speed is a server setting.
 
 First build with all of these, so please say if anything misbehaves, and how it looks in the game.
