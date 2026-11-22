@@ -118,6 +118,10 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 
 ## What's new
 
+**22 November 2026**
+
+- **Satellite picture on and off.** A **Show satellite picture** box on the Places tab, under **Load satellite**, takes the satellite colour off the ground and puts it back. The picture stays loaded, so it returns at once with no download, and the editor remembers the choice next time.
+
 **21 November 2026, late**
 
 - **Tree placer.** A **Trees** button on the left panel (or **Tree** on the Ground tab) opens a list of every tree in the game: forest trees 1 to 9 with their trunk variants, small oaks, oak bushes and apple trees, plus mixed sets (every tree, forest trees, oaks, an orchard) where each tree planted is a different one. A picture of the chosen tree shows with its real height, and a green outline of it follows the cursor. Click to plant one, hold and drag for a row a brush width apart, or tick **Scatter in circle** to plant a few at a time through the brush circle, a crown apart (Strength sets how many). **Vary size, turn** gives each tree its own facing and 85 to 120 % of its usual size.
