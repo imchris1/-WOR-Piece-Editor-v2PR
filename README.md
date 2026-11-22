@@ -120,6 +120,7 @@ Press `Win+R`, type `%APPDATA%\BattlefieldForge` and press Enter. Send the file 
 
 **22 November 2026**
 
+- **Real model shapes everywhere in the view.** Placed objects and trees now keep their real shapes (the same ones the Objects list shows in its picture) at every distance and every zoom. Before, the simple stand-in shapes came back in the top-down map once it was zoomed out past 3 km, and in the walk view past 1.6 km. The **Real model shapes** switch on the View menu is put back on once for everyone, a model that could not be read is tried again instead of staying a stand-in for the session, and if the game is found after the editor has started the shapes now load without a restart.
 - **Satellite picture on and off.** A **Show satellite picture** box on the Places tab, under **Load satellite**, takes the satellite colour off the ground and puts it back. The picture stays loaded, so it returns at once with no download, and the editor remembers the choice next time.
 
 **21 November 2026, late**
